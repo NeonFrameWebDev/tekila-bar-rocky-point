@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google" content="notranslate" />
+
+  <title>Galería | Tekila Bar, Malecón Kino, Puerto Peñasco</title>
+  <meta name="description" content="La terraza al atardecer, la música en vivo, los cócteles y el Bottom Bar con neón. Fotos reales de Tekila Bar en el Malecón Kino, Puerto Peñasco, Sonora." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://neonframewebdev.github.io/tekila-bar-rocky-point/galeria.html" />
+  <meta property="og:title" content="Galería | Tekila Bar, Puerto Peñasco" />
+  <meta property="og:description" content="La terraza, la música en vivo, los cócteles y el Bottom Bar con neón. Fotos de Tekila Bar." />
+  <meta property="og:image" content="https://neonframewebdev.github.io/tekila-bar-rocky-point/assets/interior_1.jpg" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Galería | Tekila Bar" />
+  <meta name="twitter:description" content="Terraza, música en vivo, cócteles y Bottom Bar. Tekila Bar, Malecón Kino." />
+  <meta name="twitter:image" content="https://neonframewebdev.github.io/tekila-bar-rocky-point/assets/interior_1.jpg" />
+
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="preload" as="image" href="assets/interior_1.jpg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-lang="es">
+
+  <!-- ── Loader ─────────────────────────────────────────────── -->
+  <div id="loader" role="status" aria-label="Cargando / Loading">
+    <img class="loader-logo" src="assets/logo.jpg" alt="Tekila Bar logo" width="110" height="110" />
+    <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- ── Nav ────────────────────────────────────────────────── -->
+  <nav class="site-nav" role="navigation" aria-label="Navegación principal">
+    <a href="index.html" class="nav-logo" aria-label="Tekila Bar inicio">
+      <img src="assets/logo.jpg" alt="" width="42" height="42" aria-hidden="true" />
+      <span class="nav-logo-text">Tekila Bar</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+        <li><a href="menu.html" data-es="Carta" data-en="Menu">Carta</a></li>
+        <li><a href="galeria.html" class="is-active" data-es="Galería" data-en="Gallery">Galería</a></li>
+        <li><a href="visita.html" data-es="Visítanos" data-en="Visit">Visítanos</a></li>
+      </ul>
+      <button type="button" class="lang-toggle" data-current="es" aria-label="Switch to English">
+        <span class="lt-en">EN</span><span class="lt-sep">/</span><span class="lt-es">ES</span>
+      </button>
+      <a href="tel:+526381093895" class="nav-cta" data-es="Llama ahora" data-en="Call now">Llama ahora</a>
+      <button class="nav-hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <nav class="nav-drawer" id="nav-drawer" aria-label="Menú móvil">
+    <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+    <a href="menu.html" data-es="Carta" data-en="Menu">Carta</a>
+    <a href="galeria.html" class="is-active" data-es="Galería" data-en="Gallery">Galería</a>
+    <a href="visita.html" data-es="Visítanos" data-en="Visit">Visítanos</a>
+    <a href="tel:+526381093895" class="drawer-cta" data-es="Llama ahora" data-en="Call now">Llama ahora</a>
+  </nav>
+
+  <!-- ── Page hero ──────────────────────────────────────────── -->
+  <header class="page-hero">
+    <img class="page-hero-img" src="assets/interior_1.jpg" alt="Banda en vivo Los Potrillos en el escenario de Tekila Bar bajo luz roja" fetchpriority="high" />
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+      <p class="page-hero-eyebrow" data-es="Fotos reales" data-en="Real photos">Fotos reales</p>
+      <h1 class="page-hero-title" data-es="Galería" data-en="Gallery">Galería</h1>
+      <p class="page-hero-sub"
+         data-es="Del atardecer en la terraza al neón del Bottom Bar. Así se ve una noche en Tekila Bar."
+         data-en="From sunset on the terrace to the neon of the Bottom Bar. This is a night at Tekila Bar.">
+        Del atardecer en la terraza al neón del Bottom Bar. Así se ve una noche en Tekila Bar.
+      </p>
+    </div>
+  </header>
+
+  <!-- ── Gallery ────────────────────────────────────────────── -->
+  <section id="gallery" aria-label="Galería de fotos">
+    <div class="gallery-grid">
+      <div class="gallery-item" role="button" tabindex="0" aria-label="Atardecer desde la terraza"
+           data-caption-es="El atardecer desde la terraza del Malecón Kino." data-caption-en="Sunset from the terrace on Malecón Kino.">
+        <img src="assets/exterior_1.jpg" alt="Terraza de Tekila Bar al atardecer con el letrero de madera y el Malecón al fondo" loading="lazy" />
+      </div>
+      <div class="gallery-item" role="button" tabindex="0" aria-label="Terraza al anochecer"
+           data-caption-es="Ambiente al aire libre en el Malecón Kino." data-caption-en="Open-air atmosphere on Malecón Kino.">
+        <img src="assets/exterior_2.jpg" alt="Terraza de Tekila Bar al anochecer con pérgola y luces de cuerdas" loading="lazy" />
+      </div>
+      <div class="gallery-item" role="button" tabindex="0" aria-label="Música en vivo"
+           data-caption-es="Música en vivo toda la noche en Tekila Bar." data-caption-en="Live music all night at Tekila Bar.">
+        <img src="assets/interior_1.jpg" alt="Banda en vivo Los Potrillos en el escenario bajo luz roja" loading="lazy" />
+      </div>
+      <div class="gallery-item" role="button" tabindex="0" aria-label="Cócteles de la barra"
+           data-caption-es="Cherry Smash y Mexican Sunset, los imperdibles de la barra." data-caption-en="Cherry Smash and Mexican Sunset, the must-orders at the bar.">
+        <img src="assets/drink_1.jpg" alt="Cherry Smash y Mexican Sunset en la barra al aire libre" loading="lazy" />
+      </div>
+      <div class="gallery-item" role="button" tabindex="0" aria-label="Barra de terraza"
+           data-caption-es="Bebidas y antojitos con vista al mar." data-caption-en="Drinks and snacks with an ocean view.">
+        <img src="assets/exterior_terrace_1.jpg" alt="Barra de terraza con el Malecón y palmeras de fondo" loading="lazy" />
+      </div>
+      <div class="gallery-item" role="button" tabindex="0" aria-label="Platillo de botanas"
+           data-caption-es="Todo lo que necesitas para empezar la noche." data-caption-en="Everything you need to start the night.">
+        <img src="assets/dish_3.jpg" alt="Platillo surtido de botanas al anochecer con el Malecón de fondo" loading="lazy" />
+      </div>
+      <div class="gallery-item" role="button" tabindex="0" aria-label="Mariscos y guacamole"
+           data-caption-es="Camarones a la parrilla, guacamole fresco y mariscos." data-caption-en="Grilled shrimp, fresh guacamole, and seafood.">
+        <img src="assets/dish_1.jpg" alt="Camarones a la parrilla, guacamole en molcajete y mariscos" loading="lazy" />
+      </div>
+      <div class="gallery-item" role="button" tabindex="0" aria-label="De la cocina"
+           data-caption-es="De la cocina a la mesa, con el Malecón de fondo." data-caption-en="From the kitchen to the table, the Malecón behind it.">
+        <img src="assets/dish_4.jpg" alt="Platillo de Tekila Bar servido en la terraza" loading="lazy" />
+      </div>
+      <div class="gallery-item" role="button" tabindex="0" aria-label="Hamburguesa y cócteles"
+           data-caption-es="Hamburguesas y cócteles en la barra." data-caption-en="Burgers and cocktails at the bar.">
+        <img src="assets/product_1.jpg" alt="Hamburguesa en la barra con futbol en la televisión y un cóctel verde" loading="lazy" />
+      </div>
+      <div class="gallery-item" role="button" tabindex="0" aria-label="Bottom Bar"
+           data-caption-es="La fiesta no para en el Bottom Bar." data-caption-en="The party never stops at the Bottom Bar.">
+        <img src="assets/interior_2.jpg" alt="Bottom Bar con luz UV, mesa de beer pong y pared de firmas en neón" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Lightbox ───────────────────────────────────────────── -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+    <button id="lightbox-close" aria-label="Cerrar">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+    <p id="lightbox-caption"></p>
+  </div>
+
+  <!-- ── Visit CTA ──────────────────────────────────────────── -->
+  <section id="visit-cta" aria-labelledby="visit-cta-title">
+    <div class="visit-cta-inner reveal">
+      <h2 class="visit-cta-title" id="visit-cta-title"
+          data-es="Mejor en persona."
+          data-en="Better in person.">
+        Mejor en persona.
+      </h2>
+      <p class="visit-cta-sub"
+         data-es="Las fotos ayudan, pero el atardecer y la música se viven en la terraza."
+         data-en="Photos help, but the sunset and the music happen on the terrace.">
+        Las fotos ayudan, pero el atardecer y la música se viven en la terraza.
+      </p>
+      <div class="visit-cta-actions">
+        <a href="visita.html" class="btn-primary" data-es="Cómo llegar" data-en="Get directions">Cómo llegar</a>
+        <a href="menu.html" class="btn-secondary" data-es="Ver la carta" data-en="See the menu">Ver la carta</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.jpg" alt="" width="34" height="34" aria-hidden="true" loading="lazy" />
+        <span class="footer-brand-text">Tekila Bar</span>
+      </div>
+      <nav class="footer-nav" aria-label="Pie de página">
+        <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+        <a href="menu.html" data-es="Carta" data-en="Menu">Carta</a>
+        <a href="galeria.html" data-es="Galería" data-en="Gallery">Galería</a>
+        <a href="visita.html" data-es="Visítanos" data-en="Visit">Visítanos</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/pages/Tekila-Bar-MX/1644637512487499" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Tekila Bar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/tekilabarmx" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Tekila Bar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-meta" style="text-align:center; margin-top:1.4rem;">
+      <p class="footer-tagline" data-es="En el Malecón Kino desde 2012." data-en="On Malecón Kino since 2012.">En el Malecón Kino desde 2012.</p>
+      <p><a href="tel:+526381093895" data-es="Llámanos: +52 638 109 3895" data-en="Call us: +52 638 109 3895">Llámanos: +52 638 109 3895</a></p>
+      <p style="margin-top:0.5rem; font-size:0.75rem;">&copy; 2026 Tekila Bar &middot; Puerto Peñasco, Sonora, Mex.</p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

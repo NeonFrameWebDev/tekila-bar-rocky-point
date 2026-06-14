@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google" content="notranslate" />
+
+  <title>Carta | Tekila Bar, Malecón Kino, Puerto Peñasco</title>
+  <meta name="description" content="Botanas, arrachera, mariscos y los cócteles de Tekila Bar: Cherry Smash, Mexican Sunset y las margaritas de mango más pedidas del Malecón Kino, Puerto Peñasco." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://neonframewebdev.github.io/tekila-bar-rocky-point/menu.html" />
+  <meta property="og:title" content="Carta | Tekila Bar, Puerto Peñasco" />
+  <meta property="og:description" content="Botanas para compartir, arrachera, mariscos y cócteles de la barra. Tekila Bar, Malecón Kino." />
+  <meta property="og:image" content="https://neonframewebdev.github.io/tekila-bar-rocky-point/assets/drink_1.jpg" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Carta | Tekila Bar" />
+  <meta name="twitter:description" content="Botanas, arrachera, mariscos y cócteles en el Malecón Kino, Puerto Peñasco." />
+  <meta name="twitter:image" content="https://neonframewebdev.github.io/tekila-bar-rocky-point/assets/drink_1.jpg" />
+
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="preload" as="image" href="assets/drink_1.jpg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-lang="es">
+
+  <!-- ── Loader ─────────────────────────────────────────────── -->
+  <div id="loader" role="status" aria-label="Cargando / Loading">
+    <img class="loader-logo" src="assets/logo.jpg" alt="Tekila Bar logo" width="110" height="110" />
+    <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- ── Nav ────────────────────────────────────────────────── -->
+  <nav class="site-nav" role="navigation" aria-label="Navegación principal">
+    <a href="index.html" class="nav-logo" aria-label="Tekila Bar inicio">
+      <img src="assets/logo.jpg" alt="" width="42" height="42" aria-hidden="true" />
+      <span class="nav-logo-text">Tekila Bar</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+        <li><a href="menu.html" class="is-active" data-es="Carta" data-en="Menu">Carta</a></li>
+        <li><a href="galeria.html" data-es="Galería" data-en="Gallery">Galería</a></li>
+        <li><a href="visita.html" data-es="Visítanos" data-en="Visit">Visítanos</a></li>
+      </ul>
+      <button type="button" class="lang-toggle" data-current="es" aria-label="Switch to English">
+        <span class="lt-en">EN</span><span class="lt-sep">/</span><span class="lt-es">ES</span>
+      </button>
+      <a href="tel:+526381093895" class="nav-cta" data-es="Llama ahora" data-en="Call now">Llama ahora</a>
+      <button class="nav-hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <nav class="nav-drawer" id="nav-drawer" aria-label="Menú móvil">
+    <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+    <a href="menu.html" class="is-active" data-es="Carta" data-en="Menu">Carta</a>
+    <a href="galeria.html" data-es="Galería" data-en="Gallery">Galería</a>
+    <a href="visita.html" data-es="Visítanos" data-en="Visit">Visítanos</a>
+    <a href="tel:+526381093895" class="drawer-cta" data-es="Llama ahora" data-en="Call now">Llama ahora</a>
+  </nav>
+
+  <!-- ── Page hero ──────────────────────────────────────────── -->
+  <header class="page-hero">
+    <img class="page-hero-img" src="assets/drink_1.jpg" alt="Cócteles Cherry Smash y Mexican Sunset en la barra de Tekila Bar al atardecer" fetchpriority="high" />
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+      <p class="page-hero-eyebrow" data-es="Lo que servimos" data-en="What we serve">Lo que servimos</p>
+      <h1 class="page-hero-title" data-es="Carta" data-en="Menu">Carta</h1>
+      <p class="page-hero-sub"
+         data-es="Botanas para compartir, platos fuertes y los cócteles de la barra. Cocina arriba, en la terraza."
+         data-en="Plates to share, mains off the grill, and the bar's cocktails. Kitchen upstairs, on the terrace.">
+        Botanas para compartir, platos fuertes y los cócteles de la barra. Cocina arriba, en la terraza.
+      </p>
+    </div>
+  </header>
+
+  <!-- ── Menu ───────────────────────────────────────────────── -->
+  <section id="menu" aria-labelledby="menu-title">
+    <div class="menu-inner">
+      <div class="section-header reveal">
+        <p class="section-label" data-es="Botanas y tragos" data-en="Bites and drinks">Botanas y tragos</p>
+        <h2 class="section-title" id="menu-title" data-es="De la cocina y de la barra" data-en="From the kitchen and the bar">De la cocina y de la barra</h2>
+      </div>
+
+      <div class="menu-grid reveal">
+        <!-- Food column -->
+        <div class="menu-col">
+          <h3 class="menu-col-title" data-es="Botanas &amp; Platillos" data-en="Bites &amp; Plates">Botanas &amp; Platillos</h3>
+
+          <p class="menu-category" data-es="Para compartir" data-en="To Share">Para compartir</p>
+          <ul class="menu-items">
+            <li>
+              <div class="menu-item-name" data-es="Plato de Muestra" data-en="Plato de Muestra (Sampler Platter)">Plato de Muestra</div>
+              <div class="menu-item-desc" data-es="Jalapeño poppers, alitas, mini tacos, quesadillas y molletes. Todo en una charola. Para empezar la noche bien." data-en="Jalapeño poppers, wings, mini tacos, quesadillas, and molletes. Everything on one board. Start here.">Jalapeño poppers, alitas, mini tacos, quesadillas y molletes. Todo en una charola. Para empezar la noche bien.</div>
+            </li>
+            <li>
+              <div class="menu-item-name" data-es="Guacamole (regular o mango)" data-en="Guacamole (regular or mango)">Guacamole (regular o mango)</div>
+              <div class="menu-item-desc" data-es="Hecho en molcajete. Pide el de mango si no lo has probado." data-en="Made in a molcajete. Get the mango one if you haven't.">Hecho en molcajete. Pide el de mango si no lo has probado.</div>
+            </li>
+            <li>
+              <div class="menu-item-name" data-es="Poppers con chorizo y tocino" data-en="Poppers with Chorizo and Bacon">Poppers con chorizo y tocino</div>
+              <div class="menu-item-desc" data-es="Jalapeños rellenos, bien capeados. El favorito de la barra." data-en="Stuffed jalapeños, battered and fried. A bar favorite.">Jalapeños rellenos, bien capeados. El favorito de la barra.</div>
+            </li>
+            <li>
+              <div class="menu-item-name" data-es="Alitas buffalo" data-en="Buffalo Wings">Alitas buffalo</div>
+              <div class="menu-item-desc" data-es="Con la salsa que sí pica. Trae servilletas." data-en="The sauce has heat. Bring napkins.">Con la salsa que sí pica. Trae servilletas.</div>
+            </li>
+          </ul>
+
+          <p class="menu-category" data-es="Platos fuertes" data-en="Entrees">Platos fuertes</p>
+          <ul class="menu-items">
+            <li>
+              <div class="menu-item-name">Arrachera</div>
+              <div class="menu-item-desc" data-es="Carne marinada a la parrilla con guacamole y tortillas. Confirmada por decenas de reseñas." data-en="Marinated flank steak off the grill, with guacamole and tortillas. Confirmed crowd favorite.">Carne marinada a la parrilla con guacamole y tortillas. Confirmada por decenas de reseñas.</div>
+            </li>
+            <li>
+              <div class="menu-item-name" data-es="Camarones a la parrilla" data-en="Grilled Shrimp (Camarones a la Parrilla)">Camarones a la parrilla</div>
+              <div class="menu-item-desc" data-es="Con arroz y verduras. Vista al mar incluida." data-en="With rice and vegetables. Ocean view included.">Con arroz y verduras. Vista al mar incluida.</div>
+            </li>
+            <li>
+              <div class="menu-item-name" data-es="Tacos de carne asada y camarones" data-en="Carne Asada and Shrimp Tacos">Tacos de carne asada y camarones</div>
+              <div class="menu-item-desc" data-es="Los clásicos de siempre, hechos aquí." data-en="The classics, made fresh.">Los clásicos de siempre, hechos aquí.</div>
+            </li>
+            <li>
+              <div class="menu-item-name" data-es="Hamburguesas" data-en="Burgers">Hamburguesas</div>
+              <div class="menu-item-desc" data-es="Con papas fritas. En la barra o en terraza." data-en="With fries. Order at the bar or at a terrace table.">Con papas fritas. En la barra o en terraza.</div>
+            </li>
+            <li>
+              <div class="menu-item-name" data-es="Mariscos" data-en="Mariscos (Seafood)">Mariscos</div>
+              <div class="menu-item-desc" data-es="Pregunta al mesero por los especiales del día." data-en="Ask your server about the day's specials.">Pregunta al mesero por los especiales del día.</div>
+            </li>
+          </ul>
+        </div>
+
+        <img class="menu-photo" src="assets/dish_2.jpg" alt="Plato de muestra con vista al atardecer en Tekila Bar" loading="lazy" width="380" />
+
+        <!-- Drinks column -->
+        <div class="menu-col">
+          <h3 class="menu-col-title" data-es="Cócteles &amp; Bebidas" data-en="Cocktails &amp; Drinks">Cócteles &amp; Bebidas</h3>
+
+          <p class="menu-category" data-es="Cócteles de la barra" data-en="Bar cocktails">Cócteles de la barra</p>
+          <ul class="menu-items">
+            <li>
+              <div class="menu-item-name">Cherry Smash</div>
+              <div class="menu-item-desc" data-es="Don Julio, néctar de agave, limón y cerezas. El cóctel que piden dos veces." data-en="Don Julio tequila, agave nectar, lemon juice, and muddled cherries. People order two.">Don Julio, néctar de agave, limón y cerezas. El cóctel que piden dos veces.</div>
+            </li>
+            <li>
+              <div class="menu-item-name">Mexican Sunset</div>
+              <div class="menu-item-desc" data-es="Tequila, licor de durazno, amaretto y jugo. Tan bonito como el atardecer." data-en="Tequila, peach liqueur, amaretto, and mixed juices. As good-looking as the view.">Tequila, licor de durazno, amaretto y jugo. Tan bonito como el atardecer.</div>
+            </li>
+            <li>
+              <div class="menu-item-name" data-es="Margaritas de mango" data-en="Mango Margaritas">Margaritas de mango</div>
+              <div class="menu-item-desc" data-es="Las más mencionadas en reseñas. Pide una grande." data-en="The most-mentioned drink in reviews. Order a big one.">Las más mencionadas en reseñas. Pide una grande.</div>
+            </li>
+            <li>
+              <div class="menu-item-name" data-es="Cerveza y barra completa" data-en="Beer and Full Bar">Cerveza y barra completa</div>
+              <div class="menu-item-desc" data-es="Tequila, mezcal, cerveza nacional e importada." data-en="Tequila, mezcal, domestic and imported beer.">Tequila, mezcal, cerveza nacional e importada.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="menu-note reveal"
+         data-es="Menú completo disponible en el restaurante. Los precios pueden variar."
+         data-en="Full menu available at the restaurant. Prices may vary.">
+        Menú completo disponible en el restaurante. Los precios pueden variar.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Visit CTA ──────────────────────────────────────────── -->
+  <section id="visit-cta" aria-labelledby="visit-cta-title">
+    <div class="visit-cta-inner reveal">
+      <h2 class="visit-cta-title" id="visit-cta-title"
+          data-es="Con hambre y con vista al mar."
+          data-en="Hungry, with an ocean view.">
+        Con hambre y con vista al mar.
+      </h2>
+      <p class="visit-cta-sub"
+         data-es="Sube a la terraza, pide para compartir y quédate para el atardecer."
+         data-en="Head up to the terrace, order for the table, and stay for the sunset.">
+        Sube a la terraza, pide para compartir y quédate para el atardecer.
+      </p>
+      <div class="visit-cta-actions">
+        <a href="visita.html" class="btn-primary" data-es="Cómo llegar" data-en="Get directions">Cómo llegar</a>
+        <a href="tel:+526381093895" class="btn-secondary" data-es="Llámanos" data-en="Call us">Llámanos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.jpg" alt="" width="34" height="34" aria-hidden="true" loading="lazy" />
+        <span class="footer-brand-text">Tekila Bar</span>
+      </div>
+      <nav class="footer-nav" aria-label="Pie de página">
+        <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+        <a href="menu.html" data-es="Carta" data-en="Menu">Carta</a>
+        <a href="galeria.html" data-es="Galería" data-en="Gallery">Galería</a>
+        <a href="visita.html" data-es="Visítanos" data-en="Visit">Visítanos</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/pages/Tekila-Bar-MX/1644637512487499" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Tekila Bar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/tekilabarmx" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Tekila Bar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-meta" style="text-align:center; margin-top:1.4rem;">
+      <p class="footer-tagline" data-es="En el Malecón Kino desde 2012." data-en="On Malecón Kino since 2012.">En el Malecón Kino desde 2012.</p>
+      <p><a href="tel:+526381093895" data-es="Llámanos: +52 638 109 3895" data-en="Call us: +52 638 109 3895">Llámanos: +52 638 109 3895</a></p>
+      <p style="margin-top:0.5rem; font-size:0.75rem;">&copy; 2026 Tekila Bar &middot; Puerto Peñasco, Sonora, Mex.</p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

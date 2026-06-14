@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" translate="no">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google" content="notranslate" />
 
   <!-- Primary SEO -->
   <title>Tekila Bar | Malecón Kino, Puerto Peñasco, Sonora</title>
-  <meta name="description" content="Terraza con vista al mar, música en vivo y cócteles en el Malecón Kino desde 2012. 847 reseñas en Google, 4.5 estrellas. Tekila Bar, Puerto Peñasco, Sonora." />
+  <meta name="description" content="Terraza con vista al mar, música en vivo y cócteles en el Malecón Kino desde 2012. Arriba la terraza al atardecer, abajo el Bottom Bar. 847 reseñas, 4.5 estrellas en Google. Puerto Peñasco, Sonora." />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://neonframewebdev.github.io/tekila-bar-rocky-point/" />
   <meta property="og:title" content="Tekila Bar | Malecón Kino, Puerto Peñasco" />
-  <meta property="og:description" content="Terraza con vista al mar, música en vivo y cócteles en el Malecón Kino desde 2012. The best sunset on the Malecon -- Rocky Point, Sonora." />
+  <meta property="og:description" content="Arriba la terraza al atardecer, abajo el Bottom Bar. Terraza con vista al mar, música en vivo y cócteles en el Malecón Kino desde 2012." />
   <meta property="og:image" content="https://neonframewebdev.github.io/tekila-bar-rocky-point/assets/exterior_1.jpg" />
   <meta property="og:locale" content="es_MX" />
   <meta property="og:locale:alternate" content="en_US" />
@@ -20,129 +21,88 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Tekila Bar | Puerto Peñasco" />
-  <meta name="twitter:description" content="Terraza, cócteles y música en vivo en el Malecón Kino. Rocky Point, Sonora." />
+  <meta name="twitter:description" content="Arriba la terraza al atardecer, abajo el Bottom Bar. Malecón Kino, Rocky Point, Sonora." />
   <meta name="twitter:image" content="https://neonframewebdev.github.io/tekila-bar-rocky-point/assets/exterior_1.jpg" />
 
-  <!-- Favicon placeholder (logo.jpg used as fallback) -->
   <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Lato:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- Preload hero image -->
   <link rel="preload" as="image" href="assets/exterior_1.jpg" />
 
-  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+<body data-lang="es">
 
   <!-- ── Loader ─────────────────────────────────────────────── -->
   <div id="loader" role="status" aria-label="Cargando / Loading">
-    <img class="loader-logo" src="assets/logo.jpg" alt="Tekila Bar logo" width="120" height="120" />
-    <div class="loader-bar-track">
-      <div class="loader-bar-fill"></div>
-    </div>
+    <img class="loader-logo" src="assets/logo.jpg" alt="Tekila Bar logo" width="110" height="110" />
+    <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
   </div>
 
   <!-- ── Nav ────────────────────────────────────────────────── -->
-  <nav role="navigation" aria-label="Navegación principal">
-    <a href="#hero" class="nav-logo" aria-label="Tekila Bar inicio">
-      <img src="assets/logo.jpg" alt="" width="40" height="40" aria-hidden="true" />
+  <nav class="site-nav" role="navigation" aria-label="Navegación principal">
+    <a href="index.html" class="nav-logo" aria-label="Tekila Bar inicio">
+      <img src="assets/logo.jpg" alt="" width="42" height="42" aria-hidden="true" />
       <span class="nav-logo-text">Tekila Bar</span>
     </a>
 
     <div class="nav-right">
-      <!-- Nav links (desktop) -->
       <ul class="nav-links" role="list">
-        <li><a href="#menu"
-               data-es="Carta"
-               data-en="Menu">Carta</a></li>
-        <li><a href="#story"
-               data-es="Nosotros"
-               data-en="About">Nosotros</a></li>
-        <li><a href="#entertainment"
-               data-es="Eventos"
-               data-en="Events">Eventos</a></li>
-        <li><a href="#contact"
-               data-es="Visítanos"
-               data-en="Visit">Visítanos</a></li>
+        <li><a href="index.html" class="is-active" data-es="Inicio" data-en="Home">Inicio</a></li>
+        <li><a href="menu.html" data-es="Carta" data-en="Menu">Carta</a></li>
+        <li><a href="galeria.html" data-es="Galería" data-en="Gallery">Galería</a></li>
+        <li><a href="visita.html" data-es="Visítanos" data-en="Visit">Visítanos</a></li>
       </ul>
 
-      <!-- Language toggle -- always visible, never in drawer -->
-      <button type="button" class="lang-toggle" data-current="es"
-              aria-label="Cambiar a English">
+      <button type="button" class="lang-toggle" data-current="es" aria-label="Switch to English">
         <span class="lt-en">EN</span><span class="lt-sep">/</span><span class="lt-es">ES</span>
       </button>
 
-      <!-- CTA (desktop) -->
-      <a href="tel:+526381093895" class="nav-cta"
-         data-es="Llama ahora"
-         data-en="Call now">Llama ahora</a>
+      <a href="tel:+526381093895" class="nav-cta" data-es="Llama ahora" data-en="Call now">Llama ahora</a>
 
-      <!-- Hamburger (mobile) -->
       <button class="nav-hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-drawer">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
   <!-- Mobile drawer -->
   <nav class="nav-drawer" id="nav-drawer" aria-label="Menú móvil">
-    <a href="#menu"
-       data-es="Carta"
-       data-en="Menu">Carta</a>
-    <a href="#story"
-       data-es="Nosotros"
-       data-en="About">Nosotros</a>
-    <a href="#entertainment"
-       data-es="Eventos"
-       data-en="Events">Eventos</a>
-    <a href="#contact"
-       data-es="Visítanos"
-       data-en="Visit">Visítanos</a>
-    <a href="tel:+526381093895" class="drawer-cta"
-       data-es="Llama ahora"
-       data-en="Call now">Llama ahora</a>
+    <a href="index.html" class="is-active" data-es="Inicio" data-en="Home">Inicio</a>
+    <a href="menu.html" data-es="Carta" data-en="Menu">Carta</a>
+    <a href="galeria.html" data-es="Galería" data-en="Gallery">Galería</a>
+    <a href="visita.html" data-es="Visítanos" data-en="Visit">Visítanos</a>
+    <a href="tel:+526381093895" class="drawer-cta" data-es="Llama ahora" data-en="Call now">Llama ahora</a>
   </nav>
 
   <!-- ── Hero ───────────────────────────────────────────────── -->
   <section id="hero" aria-label="Hero">
-    <img
-      class="hero-img"
-      src="assets/exterior_1.jpg"
-      alt="Terraza de Tekila Bar al atardecer, Malecón Kino, Puerto Peñasco"
-      fetchpriority="high"
-      decoding="async"
-    />
+    <img class="hero-img" src="assets/exterior_1.jpg"
+         alt="Terraza de Tekila Bar al atardecer, Malecón Kino, Puerto Peñasco"
+         fetchpriority="high" decoding="async" />
     <div class="hero-overlay" aria-hidden="true"></div>
 
     <div class="hero-content">
+      <p class="hero-kicker" aria-hidden="true">TEKILA</p>
       <p class="hero-eyebrow">Malecón Kino, Puerto Peñasco</p>
-
       <h1 class="hero-h1"
           data-es="El mejor atardecer del Malecón. Con tequila."
           data-en="The best sunset on the Malecon. With tequila.">
         El mejor atardecer del Malecón. Con tequila.
       </h1>
-
       <p class="hero-sub"
-         data-es="Terraza con vista al mar, música en vivo y los cócteles que ya conoces. En el Malecón Kino desde 2012."
-         data-en="Ocean-view terrace, live music, and the drinks Rocky Point is known for. On Malecón Kino since 2012.">
-        Terraza con vista al mar, música en vivo y los cócteles que ya conoces. En el Malecón Kino desde 2012.
+         data-es="Arriba, la terraza con vista al mar y música en vivo. Abajo, el Bottom Bar. En el Malecón Kino desde 2012."
+         data-en="Upstairs, the ocean-view terrace and live music. Downstairs, the Bottom Bar. On Malecón Kino since 2012.">
+        Arriba, la terraza con vista al mar y música en vivo. Abajo, el Bottom Bar. En el Malecón Kino desde 2012.
       </p>
-
       <div class="hero-ctas">
-        <a href="#contact" class="btn-primary"
-           data-es="Ven a visitarnos"
-           data-en="Come see us">Ven a visitarnos</a>
-        <a href="#menu" class="btn-secondary"
-           data-es="Ver el menú"
-           data-en="View the menu">Ver el menú</a>
+        <a href="menu.html" class="btn-primary" data-es="Ver la carta" data-en="See the menu">Ver la carta</a>
+        <a href="tel:+526381093895" class="btn-secondary" data-es="Llámanos" data-en="Call us">Llámanos</a>
       </div>
     </div>
 
@@ -153,17 +113,13 @@
   <div id="trust-bar" role="complementary" aria-label="Credenciales">
     <div class="trust-item">
       <strong>4.5</strong>
-      <span class="trust-stars">★★★★½</span>
-      <span data-es=" en Google" data-en=" on Google"> en Google</span>
+      <span class="trust-stars">&#9733;&#9733;&#9733;&#9733;&#189;</span>
+      <span data-es="en Google" data-en="on Google">en Google</span>
     </div>
     <span class="trust-dot" aria-hidden="true">&#9679;</span>
-    <div class="trust-item">
-      <strong data-es="847 reseñas" data-en="847 reviews">847 reseñas</strong>
-    </div>
+    <div class="trust-item"><strong data-es="847 reseñas" data-en="847 reviews">847 reseñas</strong></div>
     <span class="trust-dot" aria-hidden="true">&#9679;</span>
-    <div class="trust-item"
-         data-es="Desde 2012"
-         data-en="Est. 2012">Desde 2012</div>
+    <div class="trust-item" data-es="Desde 2012" data-en="Est. 2012">Desde 2012</div>
     <span class="trust-dot" aria-hidden="true">&#9679;</span>
     <div class="trust-item">Malecón Kino, Puerto Peñasco</div>
   </div>
@@ -171,9 +127,7 @@
   <!-- ── Highlights ─────────────────────────────────────────── -->
   <section id="highlights" aria-labelledby="highlights-title">
     <div class="section-header reveal">
-      <p class="section-label"
-         data-es="Lo que nos hace especiales"
-         data-en="What makes us special">Lo que nos hace especiales</p>
+      <p class="section-label" data-es="Lo que nos hace especiales" data-en="What makes us special">Lo que nos hace especiales</p>
       <h2 class="section-title" id="highlights-title"
           data-es="Terraza, música y dos pisos de ambiente"
           data-en="Terrace, music, and two floors of atmosphere">
@@ -184,421 +138,113 @@
     <div class="highlights-grid">
       <div class="highlight-card reveal">
         <div class="highlight-icon" aria-hidden="true">
-          <!-- Sun / horizon icon -->
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3v1M4.22 6.22l.7.7M2 12h1M4.22 17.78l.7-.7M12 21v-1M19.78 17.78l-.7-.7M23 12h-1M19.78 6.22l-.7.7"/>
-            <circle cx="12" cy="12" r="4"/>
-            <path d="M3 20h18"/>
-          </svg>
+          <svg viewBox="0 0 24 24"><path d="M12 3v1M4.22 6.22l.7.7M2 12h1M4.22 17.78l.7-.7M12 21v-1M19.78 17.78l-.7-.7M23 12h-1M19.78 6.22l-.7.7"/><circle cx="12" cy="12" r="4"/><path d="M3 20h18"/></svg>
         </div>
-        <h3 class="highlight-title"
-            data-es="Vista al mar"
-            data-en="Ocean View">Vista al mar</h3>
-        <p class="highlight-body"
-           data-es="La mejor terraza del Malecón con vista al atardecer."
-           data-en="Best terrace on the Malecon for sunset views.">
-          La mejor terraza del Malecón con vista al atardecer.
-        </p>
+        <h3 class="highlight-title" data-es="Vista al mar" data-en="Ocean View">Vista al mar</h3>
+        <p class="highlight-body" data-es="La mejor terraza del Malecón con vista al atardecer." data-en="Best terrace on the Malecon for sunset views.">La mejor terraza del Malecón con vista al atardecer.</p>
       </div>
 
       <div class="highlight-card reveal">
         <div class="highlight-icon" aria-hidden="true">
-          <!-- Music note icon -->
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M9 18V5l12-2v13"/>
-            <circle cx="6" cy="18" r="3"/>
-            <circle cx="18" cy="16" r="3"/>
-          </svg>
+          <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
         </div>
-        <h3 class="highlight-title"
-            data-es="Música en vivo"
-            data-en="Live Music">Música en vivo</h3>
-        <p class="highlight-body"
-           data-es="Bandas y DJ en vivo casi todas las noches."
-           data-en="Live bands and DJs most nights.">
-          Bandas y DJ en vivo casi todas las noches.
-        </p>
+        <h3 class="highlight-title" data-es="Música en vivo" data-en="Live Music">Música en vivo</h3>
+        <p class="highlight-body" data-es="Bandas y DJ en vivo casi todas las noches." data-en="Live bands and DJs most nights.">Bandas y DJ en vivo casi todas las noches.</p>
       </div>
 
       <div class="highlight-card reveal">
         <div class="highlight-icon" aria-hidden="true">
-          <!-- Layers / building icon -->
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-            <polyline points="2 17 12 22 22 17"/>
-            <polyline points="2 12 12 17 22 12"/>
-          </svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
         </div>
-        <h3 class="highlight-title"
-            data-es="Dos pisos, una vibra"
-            data-en="Two Floors, One Vibe">Dos pisos, una vibra</h3>
-        <p class="highlight-body"
-           data-es="Restaurante con terraza arriba, Bottom Bar abajo."
-           data-en="Terrace restaurant upstairs, Bottom Bar downstairs.">
-          Restaurante con terraza arriba, Bottom Bar abajo.
+        <h3 class="highlight-title" data-es="Dos pisos, una vibra" data-en="Two Floors, One Vibe">Dos pisos, una vibra</h3>
+        <p class="highlight-body" data-es="Restaurante con terraza arriba, Bottom Bar abajo." data-en="Terrace restaurant upstairs, Bottom Bar downstairs.">Restaurante con terraza arriba, Bottom Bar abajo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ARRIBA · La Terraza ────────────────────────────────── -->
+  <section id="arriba" class="floor floor--arriba" aria-labelledby="arriba-title">
+    <div class="floor-inner">
+      <div class="floor-copy reveal">
+        <p class="floor-tag">Arriba</p>
+        <p class="floor-kicker" data-es="La Terraza" data-en="The Terrace">La Terraza</p>
+        <h2 id="arriba-title"
+            data-es="El atardecer, la música y el mar en una sola mesa."
+            data-en="The sunset, the music, and the sea at one table.">
+          El atardecer, la música y el mar en una sola mesa.
+        </h2>
+        <p data-es="Arriba está la terraza al aire libre: mesas con vista directa al Malecón, el sol cayendo sobre el mar y música en vivo casi todas las noches. Arrachera, mariscos, botanas para compartir y los cócteles que ya conoces."
+           data-en="Upstairs is the open-air terrace: tables facing the Malecón, the sun dropping into the sea, and live music most nights. Arrachera, seafood, plates to share, and the cocktails Rocky Point knows us for.">
+          Arriba está la terraza al aire libre: mesas con vista directa al Malecón, el sol cayendo sobre el mar y música en vivo casi todas las noches. Arrachera, mariscos, botanas para compartir y los cócteles que ya conoces.
         </p>
+        <ul class="floor-list">
+          <li data-es="Vista al mar y al atardecer" data-en="Ocean and sunset views">Vista al mar y al atardecer</li>
+          <li data-es="Música en vivo: bandas y DJ" data-en="Live music: bands and DJs">Música en vivo: bandas y DJ</li>
+          <li data-es="Cocina abierta: arrachera, mariscos, botanas" data-en="Kitchen open: arrachera, seafood, bites">Cocina abierta: arrachera, mariscos, botanas</li>
+        </ul>
+        <a href="menu.html" class="btn-primary" data-es="Ver la carta" data-en="See the menu">Ver la carta</a>
+      </div>
+
+      <div class="floor-media reveal">
+        <img src="assets/exterior_2.jpg" loading="lazy"
+             alt="Terraza de Tekila Bar al anochecer con pérgola, luces de cuerdas y barra de madera" />
       </div>
     </div>
   </section>
 
-  <!-- ── Menu ───────────────────────────────────────────────── -->
-  <section id="menu" aria-labelledby="menu-title">
-    <div class="menu-inner">
-      <div class="section-header reveal">
-        <p class="section-label"
-           data-es="Lo que servimos"
-           data-en="What we serve">Lo que servimos</p>
-        <h2 class="section-title" id="menu-title"
-            data-es="Botanas y Tragos"
-            data-en="Bites and Drinks">Botanas y Tragos</h2>
-      </div>
-
-      <div class="menu-grid reveal">
-        <!-- Food column -->
-        <div class="menu-col">
-          <h3 class="menu-col-title"
-              data-es="Botanas &amp; Platillos"
-              data-en="Bites &amp; Plates">Botanas &amp; Platillos</h3>
-
-          <p class="menu-category"
-             data-es="Para compartir"
-             data-en="To Share">Para compartir</p>
-
-          <ul class="menu-items">
-            <li>
-              <div class="menu-item-name"
-                   data-es="Plato de Muestra"
-                   data-en="Plato de Muestra (Sampler Platter)">Plato de Muestra</div>
-              <div class="menu-item-desc"
-                   data-es="Jalapeño poppers, alitas, mini tacos, quesadillas y molletes. Todo en una charola. Para empezar la noche bien."
-                   data-en="Jalapeño poppers, wings, mini tacos, quesadillas, and molletes. Everything on one board. Start here.">
-                Jalapeño poppers, alitas, mini tacos, quesadillas y molletes. Todo en una charola. Para empezar la noche bien.
-              </div>
-            </li>
-            <li>
-              <div class="menu-item-name"
-                   data-es="Guacamole (regular o mango)"
-                   data-en="Guacamole (regular or mango)">Guacamole (regular o mango)</div>
-              <div class="menu-item-desc"
-                   data-es="Hecho en molcajete. Pide el de mango si no lo has probado."
-                   data-en="Made in a molcajete. Get the mango one if you haven't.">
-                Hecho en molcajete. Pide el de mango si no lo has probado.
-              </div>
-            </li>
-            <li>
-              <div class="menu-item-name"
-                   data-es="Poppers con chorizo y tocino"
-                   data-en="Poppers with Chorizo and Bacon">Poppers con chorizo y tocino</div>
-              <div class="menu-item-desc"
-                   data-es="Jalapeños rellenos, bien capeados. El favorito de la barra."
-                   data-en="Stuffed jalapeños, battered and fried. A bar favorite.">
-                Jalapeños rellenos, bien capeados. El favorito de la barra.
-              </div>
-            </li>
-            <li>
-              <div class="menu-item-name"
-                   data-es="Alitas buffalo"
-                   data-en="Buffalo Wings">Alitas buffalo</div>
-              <div class="menu-item-desc"
-                   data-es="Con la salsa que sí pica. Trae servilletas."
-                   data-en="The sauce has heat. Bring napkins.">
-                Con la salsa que sí pica. Trae servilletas.
-              </div>
-            </li>
-          </ul>
-
-          <p class="menu-category"
-             data-es="Platos fuertes"
-             data-en="Entrees">Platos fuertes</p>
-
-          <ul class="menu-items">
-            <li>
-              <div class="menu-item-name">Arrachera</div>
-              <div class="menu-item-desc"
-                   data-es="Carne marinada a la parrilla con guacamole y tortillas. Confirmada por decenas de reseñas."
-                   data-en="Marinated flank steak off the grill, with guacamole and tortillas. Confirmed crowd favorite.">
-                Carne marinada a la parrilla con guacamole y tortillas. Confirmada por decenas de reseñas.
-              </div>
-            </li>
-            <li>
-              <div class="menu-item-name"
-                   data-es="Camarones a la parrilla"
-                   data-en="Grilled Shrimp (Camarones a la Parrilla)">Camarones a la parrilla</div>
-              <div class="menu-item-desc"
-                   data-es="Con arroz y verduras. Vista al mar incluida."
-                   data-en="With rice and vegetables. Ocean view included.">
-                Con arroz y verduras. Vista al mar incluida.
-              </div>
-            </li>
-            <li>
-              <div class="menu-item-name"
-                   data-es="Tacos de carne asada y camarones"
-                   data-en="Carne Asada and Shrimp Tacos">Tacos de carne asada y camarones</div>
-              <div class="menu-item-desc"
-                   data-es="Los clásicos de siempre, hechos aquí."
-                   data-en="The classics, made fresh.">
-                Los clásicos de siempre, hechos aquí.
-              </div>
-            </li>
-            <li>
-              <div class="menu-item-name"
-                   data-es="Hamburguesas"
-                   data-en="Burgers">Hamburguesas</div>
-              <div class="menu-item-desc"
-                   data-es="Con papas fritas. En la barra o en terraza."
-                   data-en="With fries. Order at the bar or at a terrace table.">
-                Con papas fritas. En la barra o en terraza.
-              </div>
-            </li>
-            <li>
-              <div class="menu-item-name"
-                   data-es="Mariscos"
-                   data-en="Mariscos (Seafood)">Mariscos</div>
-              <div class="menu-item-desc"
-                   data-es="Pregunta al mesero por los especiales del día."
-                   data-en="Ask your server about the day's specials.">
-                Pregunta al mesero por los especiales del día.
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Accent photo (center col on desktop, full-width above food on tablet/mobile) -->
-        <img
-          class="menu-photo"
-          src="assets/dish_2.jpg"
-          alt="Plato de muestra con vista al atardecer en Tekila Bar"
-          loading="lazy"
-          width="380"
-        />
-
-        <!-- Drinks column -->
-        <div class="menu-col">
-          <h3 class="menu-col-title"
-              data-es="Cócteles &amp; Bebidas"
-              data-en="Cocktails &amp; Drinks">Cócteles &amp; Bebidas</h3>
-
-          <p class="menu-category"
-             data-es="Cócteles de la barra"
-             data-en="Bar cocktails">Cócteles de la barra</p>
-
-          <ul class="menu-items">
-            <li>
-              <div class="menu-item-name">Cherry Smash</div>
-              <div class="menu-item-desc"
-                   data-es="Don Julio, néctar de agave, limón y cerezas. El cóctel que piden dos veces."
-                   data-en="Don Julio tequila, agave nectar, lemon juice, and muddled cherries. People order two.">
-                Don Julio, néctar de agave, limón y cerezas. El cóctel que piden dos veces.
-              </div>
-            </li>
-            <li>
-              <div class="menu-item-name">Mexican Sunset</div>
-              <div class="menu-item-desc"
-                   data-es="Tequila, licor de durazno, amaretto y jugo. Tan bonito como el atardecer."
-                   data-en="Tequila, peach liqueur, amaretto, and mixed juices. As good-looking as the view.">
-                Tequila, licor de durazno, amaretto y jugo. Tan bonito como el atardecer.
-              </div>
-            </li>
-            <li>
-              <div class="menu-item-name"
-                   data-es="Margaritas de mango"
-                   data-en="Mango Margaritas">Margaritas de mango</div>
-              <div class="menu-item-desc"
-                   data-es="Las más mencionadas en reseñas. Pide una grande."
-                   data-en="The most-mentioned drink in reviews. Order a big one.">
-                Las más mencionadas en reseñas. Pide una grande.
-              </div>
-            </li>
-            <li>
-              <div class="menu-item-name"
-                   data-es="Cerveza y barra completa"
-                   data-en="Beer and Full Bar">Cerveza y barra completa</div>
-              <div class="menu-item-desc"
-                   data-es="Tequila, mezcal, cerveza nacional e importada."
-                   data-en="Tequila, mezcal, domestic and imported beer.">
-                Tequila, mezcal, cerveza nacional e importada.
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <p class="menu-note reveal"
-         data-es="Menú completo disponible en el restaurante. Los precios pueden variar."
-         data-en="Full menu available at the restaurant. Prices may vary.">
-        Menú completo disponible en el restaurante. Los precios pueden variar.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── Entertainment ──────────────────────────────────────── -->
-  <section id="entertainment" aria-labelledby="entertainment-title">
-    <div class="entertainment-inner">
-      <div class="section-header reveal">
-        <p class="section-label"
-           data-es="La noche en Tekila Bar"
-           data-en="The night at Tekila Bar">La noche en Tekila Bar</p>
-        <h2 class="section-title" id="entertainment-title"
-            data-es="Arriba y abajo"
-            data-en="Upstairs and Downstairs">Arriba y abajo</h2>
-      </div>
-
-      <div class="entertainment-body reveal">
-        <!-- ES block -->
-        <div data-hide-en>
-          <p>En el piso principal: terraza abierta con vista al Malecón, música en vivo la mayoría de las noches. Bandas como Los Potrillos tocan rock, música regional y lo que el público pida.</p>
-          <p>
-            <span class="bottom-bar-label">Bottom Bar</span><br />
-            Abajo, el Bottom Bar tiene lo suyo: DJ, luces, baile y la mesa de beer pong que se desocupa cuando el ambiente se calienta.
-          </p>
-          <p>Dos opciones en el mismo lugar. Usted elige cómo quiere pasar la noche.</p>
-        </div>
-
-        <!-- EN block -->
-        <div data-hide-es>
-          <p>Main floor: open terrace facing the Malecon, live music most nights. Bands like Los Potrillos play rock, regional Mexican, and whatever the crowd wants.</p>
-          <p>
-            <span class="bottom-bar-label">Bottom Bar</span><br />
-            Downstairs, the Bottom Bar runs its own thing: DJ nights, dancing, and a beer pong table when things get going.
-          </p>
-          <p>Two options, one address. You pick how the night goes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Gallery ────────────────────────────────────────────── -->
-  <section id="gallery" aria-labelledby="gallery-title">
-    <div class="section-header reveal">
-      <p class="section-label"
-         data-es="Fotos"
-         data-en="Photos">Fotos</p>
-      <h2 class="section-title" id="gallery-title"
-          data-es="La Experiencia"
-          data-en="The Experience">La Experiencia</h2>
-    </div>
-
-    <div class="gallery-grid reveal">
-      <div class="gallery-item"
-           role="button"
-           tabindex="0"
-           aria-label="Terraza al anochecer"
-           data-caption-es="Ambiente al aire libre en el Malecón Kino."
-           data-caption-en="Open-air atmosphere on Malecón Kino.">
-        <img src="assets/exterior_2.jpg"
-             alt="Terraza de Tekila Bar al anochecer con pergola y luces de cuerdas"
-             loading="lazy" />
-      </div>
-
-      <div class="gallery-item"
-           role="button"
-           tabindex="0"
-           aria-label="Música en vivo"
-           data-caption-es="Música en vivo toda la noche en Tekila Bar."
-           data-caption-en="Live music all night at Tekila Bar.">
-        <img src="assets/interior_1.jpg"
-             alt="Banda en vivo Los Potrillos en el escenario bajo neon rojo"
-             loading="lazy" />
-      </div>
-
-      <div class="gallery-item"
-           role="button"
-           tabindex="0"
-           aria-label="Cócteles de la barra"
-           data-caption-es="Cherry Smash y Mexican Sunset -- los imperdibles de Tekila Bar."
-           data-caption-en="Cherry Smash and Mexican Sunset -- must-orders at Tekila Bar.">
-        <img src="assets/drink_1.jpg"
-             alt="Cherry Smash y Mexican Sunset en la barra al aire libre"
-             loading="lazy" />
-      </div>
-
-      <div class="gallery-item"
-           role="button"
-           tabindex="0"
-           aria-label="Barra de terraza"
-           data-caption-es="Bebidas y antojitos con vista al mar."
-           data-caption-en="Drinks and snacks with an ocean view.">
-        <img src="assets/exterior_terrace_1.jpg"
-             alt="Barra de terraza con Malecón y palmeras de fondo"
-             loading="lazy" />
-      </div>
-
-      <div class="gallery-item"
-           role="button"
-           tabindex="0"
-           aria-label="Platillo de botanas"
-           data-caption-es="Todo lo que necesitas para empezar la noche."
-           data-caption-en="Everything you need to start the night.">
-        <img src="assets/dish_3.jpg"
-             alt="Platillo surtido de botanas al anochecer con Malecón de fondo"
-             loading="lazy" />
-      </div>
-
-      <div class="gallery-item"
-           role="button"
-           tabindex="0"
-           aria-label="Mariscos y guacamole"
-           data-caption-es="Camarones a la parrilla, guacamole fresco y mariscos."
-           data-caption-en="Grilled shrimp, fresh guacamole, and seafood.">
-        <img src="assets/dish_1.jpg"
-             alt="Camarones a la parrilla, guacamole en molcajete y mariscos"
-             loading="lazy" />
-      </div>
-
-      <div class="gallery-item"
-           role="button"
-           tabindex="0"
-           aria-label="Hamburgesa y cócteles"
-           data-caption-es="Hamburguesas y cócteles en barra."
-           data-caption-en="Burgers and cocktails at the bar.">
-        <img src="assets/product_1.jpg"
-             alt="Hamburguesa en la barra con futbol en televisión y cóctel verde neón"
-             loading="lazy" />
-      </div>
-
-      <div class="gallery-item"
-           role="button"
-           tabindex="0"
-           aria-label="Bottom Bar"
-           data-caption-es="La fiesta no para en Tekila's Bottom Bar."
-           data-caption-en="The party never stops at Tekila's Bottom Bar.">
-        <img src="assets/interior_2.jpg"
-             alt="Bottom Bar con luces UV, mesa de beer pong y pared de graffiti"
-             loading="lazy" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Lightbox ───────────────────────────────────────────── -->
-  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
-    <button id="lightbox-close" aria-label="Cerrar">&times;</button>
-    <img id="lightbox-img" src="" alt="" />
-    <p id="lightbox-caption"></p>
+  <!-- ── Descend transition ─────────────────────────────────── -->
+  <div id="descend" aria-hidden="true">
+    <p class="descend-label" data-es="Baja al Bottom Bar" data-en="Down to the Bottom Bar">Baja al Bottom Bar</p>
+    <div class="descend-chev"></div>
+    <div class="descend-chev"></div>
   </div>
 
-  <!-- ── Story ──────────────────────────────────────────────── -->
+  <!-- ── ABAJO · Bottom Bar ─────────────────────────────────── -->
+  <section id="abajo" class="floor floor--abajo" aria-labelledby="abajo-title">
+    <div class="floor-inner">
+      <div class="floor-media reveal">
+        <img src="assets/interior_2.jpg" loading="lazy"
+             alt="Bottom Bar de Tekila con luz UV, mesa de beer pong y pared de firmas en neón" />
+      </div>
+
+      <div class="floor-copy reveal">
+        <p class="floor-tag neon-text">Abajo</p>
+        <p class="floor-kicker">Bottom Bar</p>
+        <h2 id="abajo-title"
+            data-es="La misma dirección, otra noche completamente distinta."
+            data-en="Same address, a completely different night.">
+          La misma dirección, otra noche completamente distinta.
+        </h2>
+        <p data-es="Abajo cambia el ritmo. El Bottom Bar enciende el neón: DJ, baile, la mesa de beer pong y la pared donde todos firman. Cuando arriba baja el sol, aquí empieza la fiesta."
+           data-en="Downstairs the tempo changes. The Bottom Bar switches on the neon: DJ sets, dancing, the beer pong table, and the wall everyone signs. When the sun goes down upstairs, the party starts here.">
+          Abajo cambia el ritmo. El Bottom Bar enciende el neón: DJ, baile, la mesa de beer pong y la pared donde todos firman. Cuando arriba baja el sol, aquí empieza la fiesta.
+        </p>
+        <ul class="floor-list">
+          <li data-es="DJ y baile hasta tarde" data-en="DJ sets and dancing late">DJ y baile hasta tarde</li>
+          <li data-es="Beer pong y pared de firmas" data-en="Beer pong and the signature wall">Beer pong y pared de firmas</li>
+          <li data-es="Luz UV, neón y pura fiesta" data-en="UV light, neon, and pure party">Luz UV, neón y pura fiesta</li>
+        </ul>
+        <a href="galeria.html" class="btn-neon" data-es="Conoce la noche" data-en="See the night">Conoce la noche</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Our Story ──────────────────────────────────────────── -->
   <section id="story" aria-labelledby="story-title">
     <div class="section-header reveal">
-      <p class="section-label"
-         data-es="Desde 2012"
-         data-en="Since 2012">Desde 2012</p>
-      <h2 class="section-title" id="story-title"
-          data-es="Nuestra Historia"
-          data-en="Our Story">Nuestra Historia</h2>
+      <p class="section-label" data-es="Desde 2012" data-en="Since 2012">Desde 2012</p>
+      <h2 class="section-title" id="story-title" data-es="Nuestra Historia" data-en="Our Story">Nuestra Historia</h2>
     </div>
 
     <div class="story-inner reveal">
-      <!-- ES paragraphs -->
       <div class="story-body" data-hide-en>
         <p>Tekila Bar abrió sus puertas en 2012 en el Malecón Kino. Lo llevan los hermanos Jorge y Jerry Gaona, que conocen Puerto Peñasco y saben lo que la gente quiere cuando llega al mar: buena comida, buenas bebidas y una vista que vale la pena. En 2020, cuando el COVID cerró la frontera, Jorge organizó una colecta para pagar la luz y ayudar a sus empleados. Así es aquí: primero la familia.</p>
         <p>Dos pisos, un solo ambiente. Arriba, terraza al aire libre con vista directa al océano, arrachera, mariscos y cócteles de la barra. Abajo, el Bottom Bar: música, baile y la noche que sigue.</p>
         <p><strong>847 reseñas en Google. 4.5 estrellas. Ven y compruébalo.</strong></p>
       </div>
-
-      <!-- EN paragraphs -->
       <div class="story-body" data-hide-es>
         <p>Tekila Bar opened in 2012 on Malecón Kino. Brothers Jorge and Jerry Gaona run it, and they know what people want when they come to the coast: good food, good drinks, and a view worth sitting down for. In 2020, when COVID shut the border, Jorge organized a community fundraiser to cover electricity and keep employees paid. That's how they do things here.</p>
-        <p>Two floors, one vibe. Upstairs: open-air terrace with direct ocean views, arrachera, mariscos, and bar cocktails. Downstairs: Tekila's Bottom Bar, live music, and the night that keeps going.</p>
+        <p>Two floors, one vibe. Upstairs: open-air terrace with direct ocean views, arrachera, mariscos, and bar cocktails. Downstairs: the Bottom Bar, live music, and the night that keeps going.</p>
         <p><strong>847 Google reviews. 4.5 stars. Come see for yourself.</strong></p>
       </div>
     </div>
@@ -607,214 +253,100 @@
   <!-- ── Reviews ────────────────────────────────────────────── -->
   <section id="reviews" aria-labelledby="reviews-title">
     <div class="section-header reveal">
-      <p class="section-label"
-         data-es="Lo que dicen"
-         data-en="What people say">Lo que dicen</p>
-      <h2 class="section-title" id="reviews-title"
-          data-es="Opiniones reales"
-          data-en="Real reviews">Opiniones reales</h2>
+      <p class="section-label" data-es="Lo que dicen" data-en="What people say">Lo que dicen</p>
+      <h2 class="section-title" id="reviews-title" data-es="Opiniones reales" data-en="Real reviews">Opiniones reales</h2>
     </div>
 
     <div class="reviews-grid">
-      <!-- Review 1 -- ES primary -->
       <div class="review-card reveal">
-        <div class="review-stars" aria-label="5 estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-quote">
+        <div class="review-stars" aria-label="5 estrellas" data-es-attr-aria-label="5 estrellas" data-en-attr-aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-quote"
+           data-es="&#8220;El mejor lugar que conocí de Puerto Peñasco para cenar y tomar bebidas, todo super rico y delicioso...&#8221;"
+           data-en="&#8220;The best place I found in Puerto Peñasco to eat and have drinks, everything super tasty and delicious...&#8221;">
           &#8220;El mejor lugar que conocí de Puerto Peñasco para cenar y tomar bebidas, todo super rico y delicioso...&#8221;
         </p>
-        <p class="review-meta">
-          <span data-es="Reseña de cliente" data-en="Guest review">Reseña de cliente</span>
-          &#8211; <span class="review-source">Google</span>
-        </p>
+        <p class="review-meta"><span data-es="Reseña de cliente" data-en="Guest review">Reseña de cliente</span> &middot; <span class="review-source">Google</span></p>
       </div>
 
-      <!-- Review 2 -- EN primary -->
       <div class="review-card reveal">
-        <div class="review-stars" aria-label="5 estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-stars" aria-label="5 estrellas" data-es-attr-aria-label="5 estrellas" data-en-attr-aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p class="review-quote"
            data-es="&#8220;Siempre es nuestra primera parada en el Malecón. Vistas hermosas, bebidas increíbles.&#8221;"
            data-en="&#8220;Always our first stop on the Malecon! Beautiful views, great drinks.&#8221;">
           &#8220;Siempre es nuestra primera parada en el Malecón. Vistas hermosas, bebidas increíbles.&#8221;
         </p>
-        <p class="review-meta">
-          <span data-es="Reseña de cliente" data-en="Guest review">Reseña de cliente</span>
-          &#8211; <span class="review-source">Apple Maps</span>
-        </p>
+        <p class="review-meta"><span data-es="Reseña de cliente" data-en="Guest review">Reseña de cliente</span> &middot; <span class="review-source">Apple Maps</span></p>
       </div>
 
-      <!-- Review 3 -- EN primary, named -->
       <div class="review-card reveal">
-        <div class="review-stars" aria-label="5 estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="review-stars" aria-label="5 estrellas" data-es-attr-aria-label="5 estrellas" data-en-attr-aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p class="review-quote"
            data-es="&#8220;Las mejores margaritas de mango de la zona. Vista al atardecer increíble.&#8221;"
            data-en="&#8220;By far the best mango margs in the area! Amazing view of the sunset.&#8221;">
           &#8220;Las mejores margaritas de mango de la zona. Vista al atardecer increíble.&#8221;
         </p>
-        <p class="review-meta">
-          <strong>Tyler DuBry</strong>
-          &#8211; <span class="review-source">Google</span>
-        </p>
+        <p class="review-meta"><strong>Tyler DuBry</strong> &middot; <span class="review-source">Google</span></p>
       </div>
     </div>
 
     <p class="reviews-badge reveal">
-      <span data-es="847 opiniones en Google &#8211; 4.5 &#9733;"
-            data-en="847 reviews on Google &#8211; 4.5 &#9733;">847 opiniones en Google &#8211; 4.5 &#9733;</span>
+      <span data-es="847 opiniones en Google &middot; 4.5 &#9733;" data-en="847 reviews on Google &middot; 4.5 &#9733;">847 opiniones en Google &middot; 4.5 &#9733;</span>
     </p>
   </section>
 
-  <!-- ── Contact ────────────────────────────────────────────── -->
-  <section id="contact" aria-labelledby="contact-title">
-    <div class="section-header reveal">
-      <p class="section-label"
-         data-es="Cómo llegar"
-         data-en="Find us">Cómo llegar</p>
-      <h2 class="section-title" id="contact-title"
-          data-es="Visítanos"
-          data-en="Visit Us">Visítanos</h2>
-    </div>
-
-    <div class="contact-grid reveal">
-      <!-- Left: contact info -->
-      <div class="contact-info">
-        <h3>Tekila Bar</h3>
-
-        <div class="contact-detail">
-          <span class="contact-label"
-                data-es="Dir."
-                data-en="Addr.">Dir.</span>
-          <span>Malecón Kino 22-C, El Puerto, Puerto Peñasco, Sonora, Mexico</span>
-        </div>
-
-        <div class="contact-detail">
-          <span class="contact-label"
-                data-es="Tel."
-                data-en="Phone">Tel.</span>
-          <a href="tel:+526381093895">+52 638 109 3895</a>
-        </div>
-
-        <div class="contact-detail">
-          <span class="contact-label">Email</span>
-          <a href="mailto:tekilabarmx@gmail.com">tekilabarmx@gmail.com</a>
-        </div>
-
-        <!-- Hours table -->
-        <table class="hours-table" aria-label="Horarios">
-          <thead>
-            <tr>
-              <th data-es="Día" data-en="Day">Día</th>
-              <th data-es="Horario" data-en="Hours">Horario</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-es="Lun&#8211;Jue" data-en="Mon&#8211;Thu">Lun&#8211;Jue</td>
-              <td>10AM &ndash; 10PM*</td>
-            </tr>
-            <tr>
-              <td data-es="Viernes" data-en="Friday">Viernes</td>
-              <td>9AM &ndash; 3AM</td>
-            </tr>
-            <tr>
-              <td data-es="Sábado" data-en="Saturday">Sábado</td>
-              <td>9AM &ndash; 3AM</td>
-            </tr>
-            <tr>
-              <td data-es="Domingo" data-en="Sunday">Domingo</td>
-              <td>9AM &ndash; 12AM</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p class="hours-footnote"
-           data-es="* Horario de apertura por confirmar."
-           data-en="* Opening time subject to confirmation.">
-          * Horario de apertura por confirmar.
-        </p>
-
-        <div class="hours-disclaimer"
-             data-es="Abierto todos los días. Ven y pregunta por los horarios actuales, o llámanos antes de venir."
-             data-en="Open daily. Hours vary by season, so call ahead or just come by.">
-          Abierto todos los días. Ven y pregunta por los horarios actuales, o llámanos antes de venir.
-        </div>
-
-        <div class="contact-detail" style="margin-top:1.25rem;">
-          <span class="contact-label" style="min-width:unset;"
-                data-es="Reservas:"
-                data-en="Reservations:">Reservas:</span>
-          <span data-es="Sin reservaciones en línea. Llegue y encuentre su mesa."
-                data-en="No online reservations. Walk in and find your spot.">
-            Sin reservaciones en línea. Llegue y encuentre su mesa.
-          </span>
-        </div>
-      </div>
-
-      <!-- Right: map -->
-      <div class="map-wrapper">
-        <iframe
-          title="Tekila Bar en Google Maps"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3591.021!2d-113.53700!3d31.30200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x76b6f8ee7e17a52e!2sTekila%20Bar!5e0!3m2!1ses!2smx!4v1715000000000!5m2!1ses!2smx"
-          width="600"
-          height="340"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+  <!-- ── Visit CTA ──────────────────────────────────────────── -->
+  <section id="visit-cta" aria-labelledby="visit-cta-title">
+    <div class="visit-cta-inner reveal">
+      <h2 class="visit-cta-title" id="visit-cta-title"
+          data-es="Te esperamos en el Malecón Kino."
+          data-en="Find us on Malecón Kino.">
+        Te esperamos en el Malecón Kino.
+      </h2>
+      <p class="visit-cta-sub"
+         data-es="Sin reservaciones. Llega, encuentra tu mesa y quédate para el atardecer."
+         data-en="No reservations. Walk in, grab a table, and stay for the sunset.">
+        Sin reservaciones. Llega, encuentra tu mesa y quédate para el atardecer.
+      </p>
+      <div class="visit-cta-actions">
+        <a href="visita.html" class="btn-primary" data-es="Cómo llegar" data-en="Get directions">Cómo llegar</a>
+        <a href="tel:+526381093895" class="btn-secondary" data-es="Llámanos" data-en="Call us">Llámanos</a>
       </div>
     </div>
   </section>
 
   <!-- ── Footer ─────────────────────────────────────────────── -->
-  <footer role="contentinfo">
+  <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="assets/logo.jpg" alt="" width="32" height="32" aria-hidden="true" loading="lazy" />
+        <img src="assets/logo.jpg" alt="" width="34" height="34" aria-hidden="true" loading="lazy" />
         <span class="footer-brand-text">Tekila Bar</span>
       </div>
 
-      <div class="footer-social">
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/pages/Tekila-Bar-MX/1644637512487499"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Facebook de Tekila Bar">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-          </svg>
-        </a>
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/tekilabarmx"
-           target="_blank"
-           rel="noopener noreferrer"
-           aria-label="Instagram de Tekila Bar">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
-          </svg>
-        </a>
-      </div>
+      <nav class="footer-nav" aria-label="Pie de página">
+        <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+        <a href="menu.html" data-es="Carta" data-en="Menu">Carta</a>
+        <a href="galeria.html" data-es="Galería" data-en="Gallery">Galería</a>
+        <a href="visita.html" data-es="Visítanos" data-en="Visit">Visítanos</a>
+      </nav>
 
-      <div class="footer-meta">
-        <p class="footer-tagline"
-           data-es="En el Malecón Kino desde 2012."
-           data-en="On Malecón Kino since 2012.">En el Malecón Kino desde 2012.</p>
-        <p data-es="Abierto todos los días. Llama para confirmar horario."
-           data-en="Open daily. Call to confirm hours.">Abierto todos los días. Llama para confirmar horario.</p>
-        <p style="margin-top:0.4rem;">
-          <a href="tel:+526381093895"
-             data-es="Llámanos: +52 638 109 3895"
-             data-en="Call us: +52 638 109 3895">Llámanos: +52 638 109 3895</a>
-        </p>
-        <p style="margin-top:0.5rem; font-size:0.75rem;">&copy; 2026 Tekila Bar</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/pages/Tekila-Bar-MX/1644637512487499" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Tekila Bar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/tekilabarmx" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Tekila Bar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
       </div>
+    </div>
+
+    <div class="footer-meta" style="text-align:center; margin-top:1.4rem;">
+      <p class="footer-tagline" data-es="En el Malecón Kino desde 2012." data-en="On Malecón Kino since 2012.">En el Malecón Kino desde 2012.</p>
+      <p><a href="tel:+526381093895" data-es="Llámanos: +52 638 109 3895" data-en="Call us: +52 638 109 3895">Llámanos: +52 638 109 3895</a></p>
+      <p style="margin-top:0.5rem; font-size:0.75rem;">&copy; 2026 Tekila Bar &middot; Puerto Peñasco, Sonora, Mex.</p>
     </div>
   </footer>
 
-  <!-- ── Scripts ────────────────────────────────────────────── -->
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
-
 </body>
 </html>

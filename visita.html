@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es" translate="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google" content="notranslate" />
+
+  <title>Visítanos | Tekila Bar, Malecón Kino, Puerto Peñasco</title>
+  <meta name="description" content="Tekila Bar está en el Malecón Kino 22-C, Puerto Peñasco, Sonora. Horarios, teléfono, mapa y cómo llegar. Abierto todos los días, sin reservaciones." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://neonframewebdev.github.io/tekila-bar-rocky-point/visita.html" />
+  <meta property="og:title" content="Visítanos | Tekila Bar, Puerto Peñasco" />
+  <meta property="og:description" content="Malecón Kino 22-C, Puerto Peñasco. Horarios, teléfono y mapa. Abierto todos los días." />
+  <meta property="og:image" content="https://neonframewebdev.github.io/tekila-bar-rocky-point/assets/exterior_terrace_1.jpg" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Visítanos | Tekila Bar" />
+  <meta name="twitter:description" content="Malecón Kino 22-C, Puerto Peñasco. Horarios, teléfono y mapa." />
+  <meta name="twitter:image" content="https://neonframewebdev.github.io/tekila-bar-rocky-point/assets/exterior_terrace_1.jpg" />
+
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="preload" as="image" href="assets/exterior_terrace_1.jpg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-lang="es">
+
+  <!-- ── Loader ─────────────────────────────────────────────── -->
+  <div id="loader" role="status" aria-label="Cargando / Loading">
+    <img class="loader-logo" src="assets/logo.jpg" alt="Tekila Bar logo" width="110" height="110" />
+    <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- ── Nav ────────────────────────────────────────────────── -->
+  <nav class="site-nav" role="navigation" aria-label="Navegación principal">
+    <a href="index.html" class="nav-logo" aria-label="Tekila Bar inicio">
+      <img src="assets/logo.jpg" alt="" width="42" height="42" aria-hidden="true" />
+      <span class="nav-logo-text">Tekila Bar</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+        <li><a href="menu.html" data-es="Carta" data-en="Menu">Carta</a></li>
+        <li><a href="galeria.html" data-es="Galería" data-en="Gallery">Galería</a></li>
+        <li><a href="visita.html" class="is-active" data-es="Visítanos" data-en="Visit">Visítanos</a></li>
+      </ul>
+      <button type="button" class="lang-toggle" data-current="es" aria-label="Switch to English">
+        <span class="lt-en">EN</span><span class="lt-sep">/</span><span class="lt-es">ES</span>
+      </button>
+      <a href="tel:+526381093895" class="nav-cta" data-es="Llama ahora" data-en="Call now">Llama ahora</a>
+      <button class="nav-hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <nav class="nav-drawer" id="nav-drawer" aria-label="Menú móvil">
+    <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+    <a href="menu.html" data-es="Carta" data-en="Menu">Carta</a>
+    <a href="galeria.html" data-es="Galería" data-en="Gallery">Galería</a>
+    <a href="visita.html" class="is-active" data-es="Visítanos" data-en="Visit">Visítanos</a>
+    <a href="tel:+526381093895" class="drawer-cta" data-es="Llama ahora" data-en="Call now">Llama ahora</a>
+  </nav>
+
+  <!-- ── Page hero ──────────────────────────────────────────── -->
+  <header class="page-hero">
+    <img class="page-hero-img" src="assets/exterior_terrace_1.jpg" alt="Barra de la terraza de Tekila Bar con el Malecón Kino de fondo" fetchpriority="high" />
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+      <p class="page-hero-eyebrow" data-es="Cómo llegar" data-en="Find us">Cómo llegar</p>
+      <h1 class="page-hero-title" data-es="Visítanos" data-en="Visit Us">Visítanos</h1>
+      <p class="page-hero-sub"
+         data-es="En el Malecón Kino, en pleno Puerto Peñasco. Abierto todos los días."
+         data-en="On Malecón Kino, in the heart of Puerto Peñasco. Open daily.">
+        En el Malecón Kino, en pleno Puerto Peñasco. Abierto todos los días.
+      </p>
+    </div>
+  </header>
+
+  <!-- ── Contact ────────────────────────────────────────────── -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="section-header reveal">
+      <p class="section-label" data-es="Aquí estamos" data-en="Here we are">Aquí estamos</p>
+      <h2 class="section-title" id="contact-title" data-es="Horarios y ubicación" data-en="Hours and location">Horarios y ubicación</h2>
+    </div>
+
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <h3>Tekila Bar</h3>
+
+        <div class="contact-detail">
+          <span class="contact-label" data-es="Dir." data-en="Addr.">Dir.</span>
+          <span>Malecón Kino 22-C, El Puerto, Puerto Peñasco, Sonora, Mexico</span>
+        </div>
+
+        <div class="contact-detail">
+          <span class="contact-label" data-es="Tel." data-en="Phone">Tel.</span>
+          <a href="tel:+526381093895">+52 638 109 3895</a>
+        </div>
+
+        <div class="contact-detail">
+          <span class="contact-label">Email</span>
+          <a href="mailto:tekilabarmx@gmail.com">tekilabarmx@gmail.com</a>
+        </div>
+
+        <table class="hours-table" aria-label="Horarios">
+          <thead>
+            <tr>
+              <th data-es="Día" data-en="Day">Día</th>
+              <th data-es="Horario" data-en="Hours">Horario</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-es="Lun&#8211;Jue" data-en="Mon&#8211;Thu">Lun&#8211;Jue</td><td>10AM &ndash; 10PM*</td></tr>
+            <tr><td data-es="Viernes" data-en="Friday">Viernes</td><td>9AM &ndash; 3AM</td></tr>
+            <tr><td data-es="Sábado" data-en="Saturday">Sábado</td><td>9AM &ndash; 3AM</td></tr>
+            <tr><td data-es="Domingo" data-en="Sunday">Domingo</td><td>9AM &ndash; 12AM</td></tr>
+          </tbody>
+        </table>
+
+        <p class="hours-footnote" data-es="* Horario de apertura por confirmar." data-en="* Opening time subject to confirmation.">* Horario de apertura por confirmar.</p>
+
+        <div class="hours-disclaimer"
+             data-es="Abierto todos los días. Ven y pregunta por los horarios actuales, o llámanos antes de venir."
+             data-en="Open daily. Come by and ask about current hours, or call us before you head over.">
+          Abierto todos los días. Ven y pregunta por los horarios actuales, o llámanos antes de venir.
+        </div>
+
+        <div class="contact-detail" style="margin-top:1.25rem;">
+          <span class="contact-label" style="min-width:unset;" data-es="Reservas:" data-en="Reservations:">Reservas:</span>
+          <span data-es="Sin reservaciones en línea. Llega y encuentra tu mesa." data-en="No online reservations. Walk in and find your spot.">Sin reservaciones en línea. Llega y encuentra tu mesa.</span>
+        </div>
+      </div>
+
+      <div class="map-wrapper">
+        <iframe
+          title="Tekila Bar en Google Maps"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3591.021!2d-113.53700!3d31.30200!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x76b6f8ee7e17a52e!2sTekila%20Bar!5e0!3m2!1ses!2smx!4v1715000000000!5m2!1ses!2smx"
+          width="600" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.jpg" alt="" width="34" height="34" aria-hidden="true" loading="lazy" />
+        <span class="footer-brand-text">Tekila Bar</span>
+      </div>
+      <nav class="footer-nav" aria-label="Pie de página">
+        <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+        <a href="menu.html" data-es="Carta" data-en="Menu">Carta</a>
+        <a href="galeria.html" data-es="Galería" data-en="Gallery">Galería</a>
+        <a href="visita.html" data-es="Visítanos" data-en="Visit">Visítanos</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/pages/Tekila-Bar-MX/1644637512487499" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Tekila Bar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/tekilabarmx" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Tekila Bar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-meta" style="text-align:center; margin-top:1.4rem;">
+      <p class="footer-tagline" data-es="En el Malecón Kino desde 2012." data-en="On Malecón Kino since 2012.">En el Malecón Kino desde 2012.</p>
+      <p><a href="tel:+526381093895" data-es="Llámanos: +52 638 109 3895" data-en="Call us: +52 638 109 3895">Llámanos: +52 638 109 3895</a></p>
+      <p style="margin-top:0.5rem; font-size:0.75rem;">&copy; 2026 Tekila Bar &middot; Puerto Peñasco, Sonora, Mex.</p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

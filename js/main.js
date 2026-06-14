@@ -24,10 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ── Nav scroll ─────────────────────────────────────────── */
-  const nav = document.querySelector("nav");
+  const nav = document.querySelector("nav.site-nav");
   const SCROLL_THRESHOLD = 60;
 
   function updateNav() {
+    if (!nav) return;
     if (window.scrollY > SCROLL_THRESHOLD) {
       nav.classList.add("scrolled");
     } else {
@@ -62,8 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ── Hero parallax (JS -- avoids iOS background-attachment:fixed bug) */
   const heroImg = document.querySelector(".hero-img");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if (heroImg) {
+  if (heroImg && !reduceMotion) {
     function parallaxHero() {
       const scrollY = window.scrollY;
       // Clamp so we only apply while hero is in view
@@ -122,22 +124,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (lightbox && lightboxImg && galleryItems.length) {
 
+    let lightboxTrigger = null;
+
     function openLightbox(src, captionEs, captionEn) {
       lightboxImg.src = src;
-      lightboxImg.alt = captionEs;
 
-      // Show caption in current language
+      // Caption + alt in current language
       const lang = document.body.dataset.lang || "es";
+      lightboxImg.alt = lang === "en" ? captionEn : captionEs;
       lightboxCaption.textContent = lang === "en" ? captionEn : captionEs;
 
       lightbox.classList.add("open");
       document.body.style.overflow = "hidden";
+      // Move focus into the dialog for keyboard users
+      lightboxClose.focus();
     }
 
     function closeLightbox() {
       lightbox.classList.remove("open");
       document.body.style.overflow = "";
       lightboxImg.src = "";
+      // Return focus to the tile that opened the lightbox
+      if (lightboxTrigger) {
+        lightboxTrigger.focus();
+        lightboxTrigger = null;
+      }
     }
 
     galleryItems.forEach((item) => {
@@ -145,6 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const img = item.querySelector("img");
         const captionEs = item.dataset.captionEs || "";
         const captionEn = item.dataset.captionEn || "";
+        lightboxTrigger = item;
         openLightbox(img.src, captionEs, captionEn);
       });
 
@@ -179,10 +191,11 @@ document.addEventListener("DOMContentLoaded", () => {
           return img && img.src === lightboxImg.src;
         });
         if (activeItem) {
-          lightboxCaption.textContent =
-            lang === "en"
-              ? activeItem.dataset.captionEn || ""
-              : activeItem.dataset.captionEs || "";
+          const cap = lang === "en"
+            ? activeItem.dataset.captionEn || ""
+            : activeItem.dataset.captionEs || "";
+          lightboxCaption.textContent = cap;
+          lightboxImg.alt = cap;
         }
       }
     });
