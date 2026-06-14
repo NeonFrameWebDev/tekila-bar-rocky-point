@@ -420,15 +420,17 @@ nav.site-nav.scrolled {
   height: 100svh;
   min-height: 600px;
   overflow: hidden;
+  /* Static sunset fallback shown before/under the animated canvas. */
+  background: linear-gradient(180deg,
+    #1e1442 0%, #6e3a82 40%, #d65a2c 58%, #ffb056 60%,
+    #14224e 60%, #060c20 100%);
 }
-.hero-img {
+.hero-canvas {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 38%;
-  will-change: transform;
+  display: block;
 }
 .hero-overlay {
   position: absolute;
