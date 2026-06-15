@@ -1013,6 +1013,28 @@ nav.site-nav.scrolled {
   .menu-pg-strip { overflow-x: visible; flex-wrap: nowrap; }
 }
 
+/* ── Food photo strip (menu page) ───────────────────────── */
+
+.menu-food-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 240px;
+  overflow: hidden;
+}
+.menu-food-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.menu-food-strip img:hover { transform: scale(1.04); }
+
+@media (min-width: 768px) {
+  .menu-food-strip { height: 340px; }
+}
+
 /* ── Full-page menu (carta page) ─────────────────────────── */
 
 .menu-jump-bar {
