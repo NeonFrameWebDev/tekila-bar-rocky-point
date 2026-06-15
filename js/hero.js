@@ -103,7 +103,7 @@
 
   function frame(t) {
     const forced = window.__HERO_FORCE_P;
-    let p = typeof forced === "number" ? forced : (Math.sin(t * 0.16) + 1) / 2; // ~39s breathe
+    let p = typeof forced === "number" ? forced : (Math.sin(t * 0.32) + 1) / 2; // ~20s breathe
     // Ease so it lingers at golden hour and at night
     p = p * p * (3 - 2 * p);
     const night = 1 - p;
