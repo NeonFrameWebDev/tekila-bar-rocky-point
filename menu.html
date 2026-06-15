@@ -84,6 +84,43 @@
     </div>
   </header>
 
+  <!-- ── Menu photo gallery ───────────────────────────────────── -->
+  <section class="menu-pg" aria-label="Carta impresa">
+    <div class="menu-pg-inner">
+      <p class="menu-pg-label" data-es="Carta impresa" data-en="Printed menu">Carta impresa</p>
+
+      <div class="menu-pg-strip" data-hide-en>
+        <button class="menu-pg-item" data-lb="assets/menu_1.jpg">
+          <img src="assets/menu_1.jpg" alt="Entradas y Ensaladas" loading="lazy" />
+        </button>
+        <button class="menu-pg-item" data-lb="assets/menu_2.jpg">
+          <img src="assets/menu_2.jpg" alt="Tacos, Suroeste y Hamburguesas" loading="lazy" />
+        </button>
+        <button class="menu-pg-item" data-lb="assets/menu_3.jpg">
+          <img src="assets/menu_3.jpg" alt="Mariscos y Postres" loading="lazy" />
+        </button>
+      </div>
+
+      <div class="menu-pg-strip" data-hide-es>
+        <button class="menu-pg-item" data-lb="assets/menu_en_1.jpg">
+          <img src="assets/menu_en_1.jpg" alt="Appetizers, Salads and Kids" loading="lazy" />
+        </button>
+        <button class="menu-pg-item" data-lb="assets/menu_en_2.jpg">
+          <img src="assets/menu_en_2.jpg" alt="Tacos, Southwestern and Burgers" loading="lazy" />
+        </button>
+        <button class="menu-pg-item" data-lb="assets/menu_en_3.jpg">
+          <img src="assets/menu_en_3.jpg" alt="Seafood and Dessert" loading="lazy" />
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Menu lightbox ─────────────────────────────────────────── -->
+  <div id="menu-lb" aria-hidden="true" role="dialog" aria-modal="true">
+    <button id="menu-lb-close" aria-label="Cerrar / Close">&times;</button>
+    <img id="menu-lb-img" src="" alt="" />
+  </div>
+
   <!-- ── Jump bar ───────────────────────────────────────────── -->
   <div class="menu-jump-bar" role="navigation" aria-label="Secciones del menú">
     <a class="menu-jump-btn" href="#sec-entradas"  data-es="Entradas"   data-en="Appetizers">Entradas</a>
@@ -675,5 +712,32 @@
 
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var lb    = document.getElementById('menu-lb');
+      var lbImg = document.getElementById('menu-lb-img');
+      var lbClose = document.getElementById('menu-lb-close');
+
+      document.querySelectorAll('.menu-pg-item').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          lbImg.src = btn.dataset.lb;
+          lbImg.alt = btn.querySelector('img').alt;
+          lb.classList.add('open');
+          lb.setAttribute('aria-hidden', 'false');
+          lbClose.focus();
+        });
+      });
+
+      function closeLb() {
+        lb.classList.remove('open');
+        lb.setAttribute('aria-hidden', 'true');
+        lbImg.src = '';
+      }
+
+      lbClose.addEventListener('click', closeLb);
+      lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLb(); });
+    })();
+  </script>
 </body>
 </html>
