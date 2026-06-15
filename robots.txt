@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://neonframewebdev.github.io/tekila-bar-rocky-point/sitemap.xml

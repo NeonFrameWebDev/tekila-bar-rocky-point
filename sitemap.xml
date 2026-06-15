@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://neonframewebdev.github.io/tekila-bar-rocky-point/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neonframewebdev.github.io/tekila-bar-rocky-point/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neonframewebdev.github.io/tekila-bar-rocky-point/" />
+  </url>
+
+  <url>
+    <loc>https://neonframewebdev.github.io/tekila-bar-rocky-point/menu.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neonframewebdev.github.io/tekila-bar-rocky-point/menu.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neonframewebdev.github.io/tekila-bar-rocky-point/menu.html" />
+  </url>
+
+  <url>
+    <loc>https://neonframewebdev.github.io/tekila-bar-rocky-point/galeria.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neonframewebdev.github.io/tekila-bar-rocky-point/galeria.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neonframewebdev.github.io/tekila-bar-rocky-point/galeria.html" />
+  </url>
+
+  <url>
+    <loc>https://neonframewebdev.github.io/tekila-bar-rocky-point/visita.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neonframewebdev.github.io/tekila-bar-rocky-point/visita.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://neonframewebdev.github.io/tekila-bar-rocky-point/visita.html" />
+  </url>
+
+</urlset>
