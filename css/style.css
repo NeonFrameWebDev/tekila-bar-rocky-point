@@ -1354,6 +1354,33 @@ nav.site-nav.scrolled {
 }
 #lightbox-close:hover { opacity: 1; }
 
+/* ── Gallery Bento ─────────────────────────────────────────── */
+.gallery-bento {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+.gallery-bento .gallery-item {
+  break-inside: unset;
+  margin-bottom: 0;
+  height: 260px;
+}
+.gallery-bento .gb-full { height: 200px; }
+.gallery-bento .gallery-item img { height: 100%; object-fit: cover; }
+@media (min-width: 768px) {
+  .gallery-bento {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 300px 300px 380px;
+  }
+  .gallery-bento .gallery-item,
+  .gallery-bento .gb-full { height: auto; }
+  .gb-wide { grid-column: 1 / 3; grid-row: 1; }
+  .gb-tall { grid-column: 3; grid-row: 1 / 3; }
+  .gb-full { grid-column: 1 / -1; grid-row: 3; }
+}
+
 /* ── Contact ──────────────────────────────────────────────── */
 
 #contact {
