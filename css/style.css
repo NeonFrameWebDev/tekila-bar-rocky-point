@@ -1032,7 +1032,7 @@ nav.site-nav.scrolled {
 .menu-food-strip img:hover { transform: scale(1.04); }
 
 @media (min-width: 768px) {
-  .menu-food-strip { height: 340px; }
+  .menu-food-strip { height: 520px; }
 }
 
 /* ── Full-page menu (carta page) ─────────────────────────── */
