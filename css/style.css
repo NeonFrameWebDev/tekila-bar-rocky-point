@@ -1065,6 +1065,18 @@ nav.site-nav.scrolled {
   font-style: italic;
 }
 
+.menu-special-wrap {
+  background: var(--bg-2);
+  padding: 1.5rem var(--edge);
+  border-top: 1px solid var(--gold-border);
+  border-bottom: 1px solid var(--gold-border);
+}
+.menu-special-wrap .menu-special {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  margin-top: 0;
+}
+
 .menu-special {
   display: flex;
   align-items: center;
