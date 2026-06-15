@@ -655,12 +655,13 @@ nav.site-nav.scrolled {
   object-fit: cover;
   object-position: center;
   opacity: 0;
-  animation: hcycle 16s infinite;
+  animation: hcycle 20s infinite;
 }
 .highlight-slide:nth-child(1) { animation-delay:  0s; opacity: 1; }
 .highlight-slide:nth-child(2) { animation-delay:  4s; }
 .highlight-slide:nth-child(3) { animation-delay:  8s; }
 .highlight-slide:nth-child(4) { animation-delay: 12s; }
+.highlight-slide:nth-child(5) { animation-delay: 16s; }
 .mslide {
   position: absolute;
   inset: 0;
