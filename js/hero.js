@@ -26,8 +26,17 @@
   const SEA_BOT_DAY = [14, 20, 50], SEA_BOT_NIGHT = [3, 4, 14];
   const EMBER = [255, 202, 128];
   const NEON_A = [255, 45, 149], NEON_B = [54, 226, 255];
+  // Craters as fractions of the moon radius (fixed so they don't jitter).
+  const MOON_CRATERS = [
+    { dx: -0.30, dy: -0.22, r: 0.17 },
+    { dx: 0.22, dy: -0.04, r: 0.12 },
+    { dx: -0.06, dy: 0.30, r: 0.11 },
+    { dx: 0.34, dy: 0.28, r: 0.07 },
+    { dx: 0.05, dy: -0.42, r: 0.06 },
+    { dx: -0.40, dy: 0.12, r: 0.06 },
+  ];
 
-  let W = 0, H = 0, DPR = 1, horizonY = 0;
+  let W = 0, H = 0, DPR = 1, horizonY = 0, palmH = 0;
   let stars = [], embers = [], garland = [];
 
   const lerp = (a, b, t) => a + (b - a) * t;
@@ -48,6 +57,9 @@
     canvas.height = Math.round(H * DPR);
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
     horizonY = H * 0.6;
+    // Keep the foreground palms in scale on tall, narrow phones so the
+    // scene reads as a wide vista, not a zoomed-in crop.
+    palmH = Math.min(W * 0.5, H * 0.44);
     build();
   }
 
@@ -70,43 +82,58 @@
     }
   }
 
-  function palm(baseX, dir) {
-    // Trunk
-    const baseY = H + 6;
-    const topX = baseX + dir * W * 0.04;
-    const topY = H * 0.46;
-    ctx.fillStyle = "rgba(0,0,0,0.9)";
+  // One drooping, tapered palm frond (filled leaf shape).
+  function frond(ox, oy, ang, len, w) {
+    const horiz = Math.abs(Math.cos(ang));        // 1 when the frond is horizontal
+    const ex = ox + Math.cos(ang) * len;
+    const ey = oy + Math.sin(ang) * len + horiz * len * 0.5; // tips fall with gravity
+    const mx = ox + Math.cos(ang) * len * 0.55;
+    const my = oy + Math.sin(ang) * len * 0.55 + horiz * len * 0.14;
+    const pa = ang + Math.PI / 2;
+    const px = Math.cos(pa) * w, py = Math.sin(pa) * w;
     ctx.beginPath();
-    ctx.moveTo(baseX - 7, baseY);
-    ctx.quadraticCurveTo(baseX + dir * 6, H * 0.74, topX - 4, topY);
-    ctx.lineTo(topX + 4, topY);
-    ctx.quadraticCurveTo(baseX + dir * 18, H * 0.74, baseX + 7, baseY);
+    ctx.moveTo(ox, oy);
+    ctx.quadraticCurveTo(mx + px, my + py, ex, ey);
+    ctx.quadraticCurveTo(mx - px, my - py, ox, oy);
+    ctx.fill();
+  }
+
+  function palm(baseX, dir, h) {
+    const baseY = H + 8;
+    const crownX = baseX + dir * h * 0.16;
+    const crownY = baseY - h;
+    const tw = Math.max(5, h * 0.045);
+    ctx.fillStyle = "rgba(0,0,0,0.92)";
+    // Curved, tapered trunk
+    ctx.beginPath();
+    ctx.moveTo(baseX - tw, baseY);
+    ctx.quadraticCurveTo(baseX + dir * h * 0.02, baseY - h * 0.55, crownX - tw * 0.5, crownY);
+    ctx.lineTo(crownX + tw * 0.5, crownY);
+    ctx.quadraticCurveTo(baseX + dir * h * 0.1 + tw, baseY - h * 0.55, baseX + tw, baseY);
     ctx.closePath();
     ctx.fill();
-    // Fronds
-    ctx.strokeStyle = "rgba(0,0,0,0.9)";
-    ctx.lineCap = "round";
-    for (let i = 0; i < 7; i++) {
-      const ang = (-Math.PI * 0.5) + dir * (i - 3) * 0.42;
-      const len = H * (0.17 + (i % 2) * 0.05);
-      const ex = topX + Math.cos(ang) * len;
-      const ey = topY + Math.sin(ang) * len * 0.8;
-      const mx = topX + Math.cos(ang) * len * 0.5 - dir * 8;
-      const my = topY + Math.sin(ang) * len * 0.5 - 18;
-      ctx.lineWidth = 6;
+    // Coconut cluster at the crown
+    for (let i = 0; i < 3; i++) {
       ctx.beginPath();
-      ctx.moveTo(topX, topY);
-      ctx.quadraticCurveTo(mx, my, ex, ey);
-      ctx.stroke();
+      ctx.arc(crownX + (i - 1) * tw * 0.95, crownY + tw * 0.5, tw * 0.55, 0, 6.2832);
+      ctx.fill();
+    }
+    // Crown of drooping fronds
+    const N = 9;
+    for (let i = 0; i < N; i++) {
+      const f = i / (N - 1);
+      const ang = -Math.PI * 0.5 + (f - 0.5) * Math.PI * 1.45;
+      const len = h * (0.5 + 0.16 * Math.sin(f * Math.PI));
+      frond(crownX, crownY, ang, len, h * 0.05);
     }
   }
 
   function frame(t) {
     const forced = window.__HERO_FORCE_P;
     let p = typeof forced === "number" ? forced : (Math.sin(t * 0.32) + 1) / 2; // ~20s breathe
-    // Ease so it lingers at golden hour and at night
-    p = p * p * (3 - 2 * p);
+    p = p * p * (3 - 2 * p); // ease: linger at golden hour and at night
     const night = 1 - p;
+    const narrow = W < 700;
 
     ctx.clearRect(0, 0, W, H);
 
@@ -128,22 +155,92 @@
       }
     }
 
+    // ── Moon (rises through the night, opposite the sun) ──
+    if (night > 0.4) {
+      const mA = Math.min(1, (night - 0.4) / 0.4);
+      const moonX = W * 0.74;
+      const moonY = lerp(horizonY * 0.82, H * 0.16, night);
+      const moonR = Math.min(W, H) * (narrow ? 0.05 : 0.052);
+      // Soft halo
+      const mh = ctx.createRadialGradient(moonX, moonY, moonR * 0.6, moonX, moonY, moonR * 3.4);
+      mh.addColorStop(0, rgba([206, 220, 255], 0.45 * mA));
+      mh.addColorStop(1, rgba([206, 220, 255], 0));
+      ctx.fillStyle = mh;
+      ctx.fillRect(moonX - moonR * 3.4, moonY - moonR * 3.4, moonR * 6.8, moonR * 6.8);
+      // Disc with a soft lit gradient
+      const md = ctx.createRadialGradient(moonX - moonR * 0.3, moonY - moonR * 0.3, moonR * 0.2, moonX, moonY, moonR);
+      md.addColorStop(0, rgba([246, 249, 255], mA));
+      md.addColorStop(1, rgba([198, 209, 236], mA));
+      ctx.fillStyle = md;
+      ctx.beginPath();
+      ctx.arc(moonX, moonY, moonR, 0, 6.2832);
+      ctx.fill();
+      // Craters + terminator, clipped to the disc
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(moonX, moonY, moonR, 0, 6.2832);
+      ctx.clip();
+      for (const c of MOON_CRATERS) {
+        ctx.fillStyle = rgba([168, 180, 210], 0.55 * mA);
+        ctx.beginPath();
+        ctx.arc(moonX + c.dx * moonR, moonY + c.dy * moonR, c.r * moonR, 0, 6.2832);
+        ctx.fill();
+      }
+      const term = ctx.createLinearGradient(moonX - moonR, 0, moonX + moonR, 0);
+      term.addColorStop(0, rgba([18, 22, 46], 0));
+      term.addColorStop(1, rgba([18, 22, 46], 0.4 * mA));
+      ctx.fillStyle = term;
+      ctx.beginPath();
+      ctx.arc(moonX, moonY, moonR, 0, 6.2832);
+      ctx.fill();
+      ctx.restore();
+    }
+
     // ── Sun (drawn before sea so it "sinks" into the water) ──
     const sunX = W * 0.5;
     const sunY = lerp(horizonY + H * 0.12, H * 0.13, p);
-    const sunR = Math.min(W, H) * 0.085;
+    const sunR = Math.min(W, H) * (narrow ? 0.072 : 0.085);
     const sunCol = mix(SUN_LOW, SUN_HIGH, p);
-    const glow = ctx.createRadialGradient(sunX, sunY, sunR * 0.2, sunX, sunY, sunR * 5.5);
+    // Atmospheric glow
+    const glow = ctx.createRadialGradient(sunX, sunY, sunR * 0.2, sunX, sunY, sunR * (narrow ? 4.6 : 5.6));
     glow.addColorStop(0, rgba(sunCol, 0.95));
-    glow.addColorStop(0.18, rgba(sunCol, 0.55));
-    glow.addColorStop(0.5, rgba(mix(sunCol, SKY_DAY[2], 0.5), 0.18 * p + 0.05));
+    glow.addColorStop(0.18, rgba(sunCol, 0.5));
+    glow.addColorStop(0.5, rgba(mix(sunCol, SKY_DAY[2], 0.5), 0.16 * p + 0.05));
     glow.addColorStop(1, rgba(sunCol, 0));
     ctx.fillStyle = glow;
     ctx.fillRect(0, 0, W, horizonY + sunR);
-    ctx.fillStyle = rgba(sunCol, 0.95);
+    // Soft corona rays
+    ctx.save();
+    for (let i = 0; i < 14; i++) {
+      const a = (i / 14) * Math.PI * 2 + t * 0.06;
+      const r1 = sunR * 1.12;
+      const r2 = sunR * (1.5 + 0.55 * Math.sin(t * 1.6 + i * 1.7));
+      ctx.globalAlpha = 0.10 * p;
+      ctx.strokeStyle = rgb(mix(sunCol, [255, 240, 200], 0.4));
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(sunX + Math.cos(a) * r1, sunY + Math.sin(a) * r1);
+      ctx.lineTo(sunX + Math.cos(a) * r2, sunY + Math.sin(a) * r2);
+      ctx.stroke();
+    }
+    ctx.restore();
+    // Disc with limb shading
+    const disc = ctx.createRadialGradient(sunX, sunY - sunR * 0.25, sunR * 0.1, sunX, sunY, sunR);
+    disc.addColorStop(0, rgb(mix(sunCol, [255, 255, 248], 0.65)));
+    disc.addColorStop(0.55, rgb(sunCol));
+    disc.addColorStop(1, rgb(mix(sunCol, [196, 64, 30], 0.55)));
+    ctx.fillStyle = disc;
     ctx.beginPath();
     ctx.arc(sunX, sunY, sunR, 0, 6.2832);
     ctx.fill();
+    // Bright upper rim
+    ctx.globalAlpha = 0.5;
+    ctx.strokeStyle = rgb(mix(sunCol, [255, 255, 255], 0.6));
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.arc(sunX, sunY, sunR * 0.97, Math.PI * 1.15, Math.PI * 1.85);
+    ctx.stroke();
+    ctx.globalAlpha = 1;
 
     // ── Sea ──
     const sea = ctx.createLinearGradient(0, horizonY, 0, H);
@@ -203,8 +300,8 @@
     }
 
     // ── Foreground silhouettes: palms + terrace railing ──
-    palm(W * 0.085, -1);
-    palm(W * 0.915, 1);
+    palm(W * 0.08, -1, palmH);
+    palm(W * 0.92, 1, palmH);
     ctx.fillStyle = "rgba(0,0,0,0.92)";
     const railY = H * 0.95;
     ctx.fillRect(0, railY, W, 4);
